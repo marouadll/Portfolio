@@ -3,19 +3,28 @@ import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/Header.css';
 
-const Header = ({ scrolled }) => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Fermer le menu quand la taille de l'écran change
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setMenuOpen(false);
       }
     };
 
+    window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -29,49 +38,20 @@ const Header = ({ scrolled }) => {
       >
         DevTeam
       </Link>
-      
+
       <button 
-        className="menu-toggle" 
+        className={`menu-toggle ${menuOpen ? 'active' : ''}`}
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Menu"
-        aria-expanded={menuOpen}
       >
         {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </button>
-      
-      <nav className={menuOpen ? 'active' : ''}>
-        <Link 
-          to="home" 
-          smooth={true} 
-          duration={500}
-          onClick={() => setMenuOpen(false)}
-        >
-          Accueil
-        </Link>
-        <Link 
-          to="team" 
-          smooth={true} 
-          duration={500}
-          onClick={() => setMenuOpen(false)}
-        >
-          Équipe
-        </Link>
-        <Link 
-          to="projects" 
-          smooth={true} 
-          duration={500}
-          onClick={() => setMenuOpen(false)}
-        >
-          Projets
-        </Link>
-        <Link 
-          to="contact" 
-          smooth={true} 
-          duration={500}
-          onClick={() => setMenuOpen(false)}
-        >
-          Contact
-        </Link>
+
+      <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+        <Link to="home" smooth onClick={() => setMenuOpen(false)}>Accueil</Link>
+        <Link to="team" smooth onClick={() => setMenuOpen(false)}>Équipe</Link>
+        <Link to="projects" smooth onClick={() => setMenuOpen(false)}>Projets</Link>
+        <Link to="contact" smooth onClick={() => setMenuOpen(false)}>Contact</Link>
       </nav>
     </header>
   );
