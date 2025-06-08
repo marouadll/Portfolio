@@ -1,9 +1,9 @@
 {
   "name": "portfolio-devs",
-  "homepage": "https://marouadll.github.io/Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://marouadll.github.io/portfolio-devs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,7 +24,6 @@
     "@eslint/js": "^9.25.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "@types/react-icons": "^2.2.7",
     "@vitejs/plugin-react": "^4.4.1",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
