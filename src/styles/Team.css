@@ -1,0 +1,180 @@
+/* src/styles/Team.css */
+.team {
+  background: #121212;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2rem;
+  color: #bb86fc;
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: #1e1e1e;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: #2a2a2a;
+}
+
+.tab.active {
+  background: #bb86fc;
+  color: #121212;
+}
+
+.member-details {
+  background: #1e1e1e;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.placeholder {
+  width: 150px;
+  height: 150px;
+  background: #2a2a2a;
+  border: 3px solid #bb86fc;
+  border-radius: 50%;
+  grid-row: span 4;
+}
+
+.member-details h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  color: #bb86fc;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill {
+  background: rgba(187, 134, 252, 0.2);
+  color: #bb86fc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-link {
+  background: #bb86fc;
+  color: #121212;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.social-link:hover {
+  background: #d0a9ff;
+}
+
+@media (max-width: 768px) {
+  .member-details {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .placeholder {
+    margin: 0 auto;
+    grid-row: auto;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .skills,
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Ajoutez ces styles à la fin de votre fichier Team.css */
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #bb86fc;
+  color: #121212;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.social-link .icon {
+  font-size: 1.1rem;
+}
+
+/* Version compacte pour mobile */
+@media (max-width: 480px) {
+  .social-link {
+    padding: 0.5rem;
+  }
+  
+  .social-link span {
+    display: none;
+  }
+  
+  .social-link .icon {
+    font-size: 1.3rem;
+  }
+}

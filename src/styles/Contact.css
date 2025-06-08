@@ -1,0 +1,105 @@
+/* src/styles/Contact.css */
+.contact {
+  width: 100%;
+  background: #121212;
+  padding: 4rem 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #bb86fc; /* Violet comme dans la photo */
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.contact-card {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.placeholder {
+  width: 100px;
+  height: 100px;
+  background: #fff; /* Fond blanc comme dans la photo */
+  border: 5px solid #bb86fc; /* Bordure violette */
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.contact-card h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-btn {
+  background: #bb86fc; /* Violet comme dans la photo */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 15px; /* Coins arrondis comme dans la photo */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #d0a9ff; /* Légère variation au survol */
+}
+
+.cta {
+  display: inline-block;
+  background: #bb86fc;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 15px; /* Coins arrondis comme dans la photo */
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #d0a9ff;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 10px;
+  }
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .placeholder {
+    width: 80px;
+    height: 80px;
+  }
+  .contact-card h3 {
+    font-size: 1rem;
+  }
+  .contact-btn {
+    font-size: 0.9rem;
+  }
+}

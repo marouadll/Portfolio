@@ -1,0 +1,74 @@
+/* src/styles/Projects.css */
+.projects {
+  width: 100%;
+  background: #121212;
+  padding: 4rem 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: #bb86fc; /* Violet comme dans la photo */
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.project-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  padding: 1rem;
+  background: #1a1a1a;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.placeholder {
+  width: 100%;
+  height: 150px;
+  background: #333; /* Placeholder gris comme dans la photo */
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  color: #bb86fc; /* Violet comme dans la photo */
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #d0a9ff; /* Légère variation au survol */
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 2rem 10px;
+  }
+  .project-grid {
+    grid-template-columns: 1fr; /* Une colonne sur mobile */
+  }
+  .placeholder {
+    height: 120px;
+  }
+}

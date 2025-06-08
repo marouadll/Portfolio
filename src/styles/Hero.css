@@ -1,0 +1,96 @@
+/* src/styles/Hero.css */
+.hero {
+  width: 100%;
+  background: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px 40px; /* Ajusté pour le header fixe */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #bb86fc; /* Violet comme dans la photo */
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: #bbb;
+}
+
+.team-preview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.placeholder {
+  width: 150px;
+  height: 150px;
+  background: #333; /* Placeholder gris comme dans la photo */
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.team-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.cta {
+  background: #bb86fc;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #d0a9ff; /* Légère variation au survol */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 10px 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .team-preview {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .placeholder {
+    width: 120px;
+    height: 120px;
+  }
+}

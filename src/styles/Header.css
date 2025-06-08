@@ -1,0 +1,65 @@
+.header {
+  background-color: rgba(10, 10, 10, 0.95);
+  position: fixed;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1.5rem 3rem;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(187, 134, 252, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.header.scrolled {
+  padding: 1rem 3rem;
+  background-color: rgba(10, 10, 10, 0.98);
+  box-shadow: 0 5px 30px rgba(187, 134, 252, 0.1);
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #bb86fc;
+  transition: var(--transition);
+}
+
+.header nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header nav a {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+.header nav a:hover,
+.header nav a.active {
+  color: white;
+}
+
+.header nav a:hover::after,
+.header nav a.active::after {
+  width: 100%;
+}

@@ -1,0 +1,68 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121212; /* Fond sombre général */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  padding: 80px 20px 40px; /* Espacement supérieur pour header fixe, ajusté pour contenu */
+  position: relative;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #bbb; /* Gris clair pour le texte secondaire */
+}
+
+a {
+  text-decoration: none;
+  color: #bb86fc; /* Violet par défaut pour les liens */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #d0a9ff; /* Variation au survol */
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 10px 20px; /* Réduction des marges sur mobile */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
