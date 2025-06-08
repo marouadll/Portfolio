@@ -1,11 +1,17 @@
+:root {
+  --primary: #bb86fc;
+  --secondary: #03dac6;
+  --transition: all 0.3s ease;
+}
+
 .header {
   background-color: rgba(10, 10, 10, 0.95);
   position: fixed;
-  min-width: 100%;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 1.5rem 3rem;
+  padding: 1rem;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(187, 134, 252, 0.1);
   display: flex;
@@ -15,38 +21,36 @@
 }
 
 .header.scrolled {
-  padding: 1rem 3rem;
-  background-color: rgba(10, 10, 10, 0.98);
-  box-shadow: 0 5px 30px rgba(187, 134, 252, 0.1);
+  padding: 0.8rem 1rem;
 }
 
 .header .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #bb86fc;
+  color: var(--primary);
+  white-space: nowrap;
   transition: var(--transition);
+  z-index: 1001;
 }
 
+/* Version desktop */
 .header nav {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .header nav a {
   position: relative;
   font-weight: 500;
-  font-size: 1.1rem;
-  transition: var(--transition);
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0;
 }
 
 .header nav a::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -62,4 +66,59 @@
 .header nav a:hover::after,
 .header nav a.active::after {
   width: 100%;
+}
+
+/* Menu burger */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0.5rem;
+}
+
+/* Version tablette */
+@media (max-width: 992px) {
+  .header nav {
+    gap: 1rem;
+  }
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .header nav.active {
+    transform: translateX(0);
+  }
+
+  .header nav a {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .header.scrolled {
+    padding: 0.8rem;
+  }
 }
